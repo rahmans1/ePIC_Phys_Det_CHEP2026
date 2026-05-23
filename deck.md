@@ -376,7 +376,7 @@ Will enable precision studies of nucleons and nuclei at the scale of sea quarks 
 
 <div style="display:grid;grid-template-columns:30% 70%;gap:16px;align-items:start;margin-top:0;">
   <div>
-    <p style="font-size:17px;line-height:1.5;margin:0 0 10px;">Time profiling of single-threaded run with realistic deep inelastic scattering events. The step density plot shows where stepping activity — and hence simulation time — is concentrated.</p>
+    <div style="background:#e7f2f6;border-left:5px solid #2c7da0;border-radius:4px;padding:10px 12px;font-size:20px;font-weight:600;color:#104b73;margin-bottom:10px;">Time profiling of single-threaded run with realistic deep inelastic scattering events. The step density plot shows where stepping activity — and hence simulation time — is concentrated.</div>
     <div style="font-size:17px;line-height:2.0;color:#1f2933;background:#f0f5f9;border-radius:6px;padding:8px 12px;">
       <div><strong>1</strong> Far Forward (Other) &nbsp;<span style="color:#888;">43.4%</span></div>
       <div><strong>2</strong> dRICH &nbsp;<span style="color:#888;">9.5%</span></div>
@@ -491,29 +491,38 @@ Will enable precision studies of nucleons and nuclei at the scale of sea quarks 
 
 ## Simphony Use Case: Standalone ePIC Subsystem Design Simulations
 
-<div style="display:grid;grid-template-columns:30% 35% 35%;gap:16px;align-items:start;grid-template-rows:1fr;">
+<div style="display:grid;grid-template-columns:32% 68%;gap:16px;align-items:start;">
+
 <div style="background:#eef4fb;border:1px solid #b3cfe8;border-left:6px solid #1E5BA8;border-radius:6px;padding:16px 18px;">
-<p style="font-size:20px;font-weight:700;color:#1E5BA8;margin:0 0 10px;">Accelerating Cherenkov Photons in Particle Identification (PID) Detectors</p>
-<p style="font-size:19px;margin:0 0 10px;">PID detector simulations are dominated by optical photon transport and benefit most from GPU acceleration:</p>
+<p style="font-size:20px;font-weight:700;color:#1E5BA8;margin:0 0 10px;">Accelerating Optical Photons in ePIC PID Detectors</p>
+<p style="font-size:18px;margin:0 0 10px;">Accelerating optical photon transport is critical for PID detector simulations <a href="https://arxiv.org/abs/2410.20410" style="font-size:15px;color:#5f6b7a;">(C. Chatterjee et al.)</a></p>
 <ul style="font-size:18px;margin:0;padding-left:16px;line-height:1.7;">
-  <li><strong>hpDIRC</strong> — barrel π/K/p up to 6 GeV/c (|η| ≲ 1.7); dense Cherenkov rings</li>
-  <li><strong>pfRICH</strong> — e/π and π/K (η −3.5 to −1.5, up to ~10 GeV/c); aerogel radiator</li>
-  <li><strong>dRICH</strong> — π/K/p (η 1.5–3.5, up to 50 GeV/c); dual aerogel + C₂F₆</li>
+  <li><strong>hpDIRC</strong> — barrel PID; dense Cherenkov rings</li>
+  <li><strong>pfRICH</strong> — backward endcap PID; aerogel radiator</li>
+  <li><strong>dRICH</strong> — forward endcap PID; dual aerogel + C₂F₆</li>
 </ul>
 </div>
-<div>
-  <img src="assets/HPDIRCDetector.jpg" alt="hpDIRC" style="width:100%;max-height:360px;object-fit:contain;">
-  <p style="text-align:center;font-size:15px;font-weight:700;color:#5f6b7a;margin:2px 0 10px;">hpDIRC · <a href="https://indico.bnl.gov/event/26584/contributions/102777/attachments/62225/107677/20250612-hpDIRC-DACmeeting_GK.pdf" style="font-weight:400;">G. Kalicy (2025)</a></p>
-  <img src="assets/PFRICHdetector.jpg" alt="pfRICH" style="width:100%;max-height:160px;object-fit:contain;">
-  <p style="text-align:center;font-size:15px;font-weight:700;color:#5f6b7a;margin:2px 0 0;">pfRICH · <a href="https://arxiv.org/abs/2512.14598" style="font-weight:400;">D. H. Dongwi et al. (2025)</a></p>
-</div>
-<div style="display:flex;flex-direction:column;justify-content:center;height:100%;">
-  <img src="assets/drich-detector.jpg" alt="dRICH" style="width:100%;max-height:360px;object-fit:contain;">
-  <p style="text-align:center;font-size:15px;font-weight:700;color:#5f6b7a;margin:2px 0 0;">dRICH · <a href="https://indico.bnl.gov/event/31228/contributions/118734/attachments/67379/115790/rich2025-contalbrigo_2col.pdf" style="font-weight:400;">M. Contalbrigo et al. (2026)</a></p>
-</div>
+
+<div style="position:relative;">
+  <img src="assets/ePICCentralDetector.jpg" alt="ePIC Central Detector" style="width:100%;max-height:430px;object-fit:contain;">
+  <!-- pfRICH inset: left -->
+  <div style="position:absolute;top:30%;left:0;width:28%;background:white;border:2px solid #b3cfe8;border-radius:4px;padding:2px;">
+    <img src="assets/PFRICHdetector.jpg" alt="pfRICH" style="width:100%;object-fit:contain;">
+    <p style="text-align:center;font-size:12px;font-weight:700;color:#1E5BA8;margin:2px 0 1px;">pfRICH · <a href="https://arxiv.org/abs/2512.14598" style="font-weight:400;font-size:11px;color:#5f6b7a;">Dongwi et al.</a></p>
+  </div>
+  <!-- hpDIRC inset: top -->
+  <div style="position:absolute;top:2%;left:30%;width:38%;background:white;border:2px solid #b3cfe8;border-radius:4px;padding:2px;">
+    <img src="assets/HPDIRCDetector.jpg" alt="hpDIRC" style="width:100%;object-fit:contain;">
+    <p style="text-align:center;font-size:12px;font-weight:700;color:#1E5BA8;margin:2px 0 1px;">hpDIRC · <a href="https://indico.bnl.gov/event/26584/contributions/102777/attachments/62225/107677/20250612-hpDIRC-DACmeeting_GK.pdf" style="font-weight:400;font-size:11px;color:#5f6b7a;">G. Kalicy (2025)</a></p>
+  </div>
+  <!-- dRICH inset: right -->
+  <div style="position:absolute;top:30%;right:0;width:28%;background:white;border:2px solid #b3cfe8;border-radius:4px;padding:2px;">
+    <img src="assets/drich-detector.jpg" alt="dRICH" style="width:100%;object-fit:contain;">
+    <p style="text-align:center;font-size:12px;font-weight:700;color:#1E5BA8;margin:2px 0 1px;">dRICH · <a href="https://indico.bnl.gov/event/31228/contributions/118734/attachments/67379/115790/rich2025-contalbrigo_2col.pdf" style="font-weight:400;font-size:11px;color:#5f6b7a;">Contalbrigo et al.</a></p>
+  </div>
 </div>
 
-<p style="position:absolute;bottom:6px;left:46px;font-size:11px;color:#a0aab4;margin:0;">C. Chatterjee on behalf of the ePIC Collaboration (2024) — <a href="https://arxiv.org/abs/2410.20410" style="color:#a0aab4;">Particle Identification with the ePIC detector at the EIC, arXiv:2410.20410</a></p>
+</div>
 
 ---
 
@@ -525,8 +534,8 @@ Will enable precision studies of nucleons and nuclei at the scale of sea quarks 
 <ul style="font-size:18px;line-height:1.5;margin:0 0 8px;">
   <li>50,000 electrons · p = 5 MeV/c · ~44M optical photons</li>
   <li>Recorded hits agree within statistical uncertainties:<br>
-    Geant4: 8,693,457 ± 2,948<br>
-    Simphony: 8,693,758 ± 2,949</li>
+    Geant4: 8.693 ± 0.003 M<br>
+    Simphony: 8.694 ± 0.003 M</li>
 </ul>
   <div style="overflow:hidden;position:relative;">
     <img src="assets/SimphonyPFrichHitmap.jpg" alt="pfRICH hit map comparison" style="width:100%;margin-top:-1.4px;object-fit:contain;">
@@ -539,14 +548,15 @@ Will enable precision studies of nucleons and nuclei at the scale of sea quarks 
 <p style="font-size:19px;font-weight:700;color:#123f6d;margin:0 0 4px;">Performance — pfRICH</p>
 <p style="font-size:15px;color:#5f6b7a;margin:0 0 6px;">GPU: NVIDIA GeForce RTX 4090 · CPU: Intel Xeon w7-3445</p>
 <div style="position:relative;display:flex;align-items:center;">
-  <div style="display:flex;flex-direction:column;align-items:center;margin-right:-2px;">
+  <div style="display:flex;flex-direction:column;align-items:center;margin-right:4px;">
     <span style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:18px;font-weight:700;color:#1f2933;white-space:nowrap;">G4 time / Simphony time</span>
   </div>
   <div style="position:relative;flex:1;">
     <img src="assets/PerformanceSimphony.jpg" alt="Simphony speedup versus Geant4 threads" style="width:100%;max-height:360px;object-fit:contain;">
-    <div style="position:absolute;top:0;left:0;width:52px;bottom:0;background:#ffffff;"></div>
-    <span style="position:absolute;top:18%;left:28px;font-size:14px;color:#1f2933;">10²</span>
-    <span style="position:absolute;top:78%;left:28px;font-size:14px;color:#1f2933;">10¹</span>
+    <div style="position:absolute;top:0;left:0;width:60px;bottom:0;background:#ffffff;"></div>
+    <span style="position:absolute;top:18%;left:34px;font-size:14px;color:#1f2933;">10²</span>
+    <span style="position:absolute;top:78%;left:34px;font-size:14px;color:#1f2933;">10¹</span>
+    <span style="position:absolute;top:40px;right:60px;font-size:16px;color:#5f6b7a;"><a href="https://arxiv.org/abs/2512.06061" style="color:#5f6b7a;">G. Galgoczi et al. arXiv:2512.06061</a></span>
   </div>
 </div>
 </div>
@@ -554,39 +564,42 @@ Will enable precision studies of nucleons and nuclei at the scale of sea quarks 
 
 <div style="text-align:center;margin-top:8px;">
 <div style="display:inline-block;background:#e7f2f6;border-left:7px solid #2c7da0;border-radius:4px;padding:10px 18px;font-size:18px;line-height:1.5;text-align:left;">
-Validation and performance studies for dRICH and hpDIRC ongoing<br>Preliminary hpDIRC result: <strong>~260× speedup</strong> vs single-thread Geant4 with 10M optical photons
+<ul style="margin:0;padding-left:18px;">
+<li>Validation and performance studies for dRICH and hpDIRC ongoing</li>
+<li>Preliminary hpDIRC result: <strong>~260× speedup</strong> vs single-thread Geant4 with 10M optical photons</li>
+<li>We hope to reproduce these studies across a range of heterogeneous resources</li>
+</ul>
 </div>
 </div>
 
-<p style="position:absolute;bottom:6px;left:46px;font-size:11px;color:#a0aab4;margin:0;">G. Galgoczi et al. (2025) — <a href="https://arxiv.org/abs/2512.06061" style="color:#a0aab4;">GPU acceleration of optical photon propagation in low photon yield applications: Opticks for the Electron Ion Collider, arXiv:2512.06061</a></p>
 
 ---
 
 ## AdePT and Celeritas: EM GPU Acceleration
 
-<p style="font-size:20px;margin:0 0 10px;"><strong><a href="https://github.com/apt-sim/AdePT">AdePT</a></strong> and <strong><a href="https://github.com/celeritas-project/celeritas">Celeritas</a></strong> both offload EM shower transport to GPU by leveraging the Geant4 Tracking Manager, enabling GPU-accelerated ePIC simulation.</p>
+<div class="callout" style="font-size:23px;margin:0 0 10px;"><a href="https://github.com/apt-sim/AdePT" style="font-weight:700;">AdePT</a> and <a href="https://github.com/celeritas-project/celeritas" style="font-weight:700;">Celeritas</a> both offload EM shower transport to GPU by leveraging the Geant4 Tracking Manager, and can potentially enable GPU-accelerated ePIC simulation.</div>
 
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
 
-<div style="background:#fff8e6;border-left:4px solid #b07d00;border-radius:4px;padding:10px 14px;font-size:20px;">
-<b>Exploring Celeritas in ePIC</b>
-<ul style="margin:8px 0 0;padding-left:18px;font-size:19px;">
+<div style="background:#fff8e6;border-left:4px solid #b07d00;border-radius:4px;padding:10px 14px;font-size:23px;">
+<strong>Exploring Celeritas in ePIC</strong>
+<ul style="margin:8px 0 0;padding-left:18px;font-size:22px;">
 <li>Added <a href="https://github.com/celeritas-project/celeritas/tree/develop/example/ddceler">DD4hep plugin</a></li>
 <li>Added support for realistic ePIC 3D RZ field maps</li>
 <li>Partial MC truth propagation</li>
 <li><em>Work in progress:</em>
   <ul style="margin:4px 0 0;padding-left:18px;">
   <li>Optical photon support in DD4hep plugin for comparisons with Simphony</li>
-  <li>Benchmarks with realistic Pythia8 events on simple pre-shower geometry</li>
+  <li>Benchmarks with realistic DIS events on simple pre-shower geometry</li>
   <li>Benchmarks on standalone calorimeter subsystem</li>
   </ul>
 </li>
 </ul>
 </div>
 
-<div class="callout" style="font-size:20px;">
-<strong>Exploring AdePT in ePIC</strong> <span style="font-weight:normal;font-size:15px;">(<a href="https://indico.bnl.gov/event/32557/#1-adept-gpu-accleration-for-em">W. Deconinck</a>)</span>
-<ul style="margin:8px 0 0;padding-left:18px;font-size:19px;">
+<div class="callout" style="font-size:23px;">
+<strong>Exploring AdePT in ePIC</strong> <span style="font-weight:normal;font-size:17px;">(<a href="https://indico.bnl.gov/event/32557/#1-adept-gpu-accleration-for-em">W. Deconinck</a>)</span>
+<ul style="margin:8px 0 0;padding-left:18px;font-size:22px;">
 <li>Added <a href="https://github.com/AIDASoft/DD4hep/pull/1606">DD4hep plugin</a></li>
 <li>End-to-end pipeline with MC truth propagation</li>
 <li>Example SiD geometry: fully working, initial benchmarking done</li>
@@ -603,71 +616,106 @@ Validation and performance studies for dRICH and hpDIRC ongoing<br>Preliminary h
 
 ---
 
-## Acceleration Challenges
+## Accelerated Simulations: hpDIRC Example and Beyond
 
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px;">
-  <div class="callout" style="font-size:22px;"><strong>CUDA Architecture Portability</strong>GPU payloads and all dependencies must be built against the CUDA arch of the destination hardware; mismatched builds cause runtime crashes</div>
-  <div class="callout" style="font-size:22px;"><strong>Workflow Integration</strong>PanDA WMS adaptive brokerage will match containers to GPU resources, but the container build matrix grows with each new arch target</div>
-  <div class="callout" style="font-size:22px;"><strong>Physics Validation Fidelity</strong>GPU-offloaded transport must reproduce Geant4 reference within analysis-level tolerances across all relevant observables</div>
-  <div class="callout" style="font-size:22px;"><strong>ML Model Generalization</strong>Surrogate models trained on one beam/energy config must remain valid across the ePIC physics programme</div>
-  <div class="callout" style="font-size:22px;"><strong>GPU Parameter Tuning</strong>GPU-specific parameters must be tuned to event topology per dataset</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px;align-items:stretch;">
+
+<div>
+<div style="background:#f0f5f9;border-left:4px solid #2f6f8f;border-radius:4px;padding:14px 16px;font-size:19px;line-height:1.5;">
+<strong style="display:block;color:#123f6d;font-size:21px;margin-bottom:8px;">Foundation Model for DIRC Detectors</strong>
+<ul style="margin:0;padding-left:18px;">
+<li>Transformer-based Foundation Model with a Mixture-of-Experts (MoE) architecture developed for DIRC detectors [1,4]</li>
+<li>Single pre-trained FM supports multiple downstream applications via fine-tuning:
+  <ul style="margin:4px 0 0 0;padding-left:16px;">
+    <li>High-fidelity, fast simulations (topology + photon yield)</li>
+    <li>Near real-time PID / Classification</li>
+    <li>Noise Filtering</li>
+  </ul>
+</li>
+<li>Demonstrated on the ePIC hpDIRC and the GlueX DIRC at Jefferson Lab [1,2,3,4], and now being extended to calorimetry [<a href="https://arxiv.org/abs/2603.28804">5</a>]</li>
+</ul>
+</div>
+
+<div style="margin-top:10px;font-size:14px;color:#5f6b7a;line-height:1.6;">
+[<a href="https://iopscience.iop.org/article/10.1088/2632-2153/ae3d81">1</a>] J. Giroux, C. Fanelli, <em>MLST</em> 7.1 (2026): 015031 &nbsp;
+[<a href="https://iopscience.iop.org/article/10.1088/2632-2153/ada8f4">2</a>] C. Fanelli et al., <em>MLST</em> 6.1 (2025): 015028 &nbsp;
+[<a href="https://arxiv.org/abs/2504.19042">3</a>] J. Giroux et al., <em>MLST</em> 6 (2025): 040501 &nbsp;
+[<a href="https://arxiv.org/abs/2604.24775">4</a>] C. Fanelli et al., arXiv:2604.24775 (2026) &nbsp;
+[<a href="https://arxiv.org/abs/2603.28804">5</a>] C. Cardona et al., arXiv:2603.28804 (2026)
+</div>
+</div>
+
+<div style="display:flex;flex-direction:column;align-items:center;gap:8px;height:100%;">
+<div style="width:100%;text-align:center;flex:1;">
+<img src="assets/MOdelingResponse_sharp.jpg" alt="Foundation Model for ePIC" style="width:100%;max-height:260px;object-fit:contain;border-radius:4px;">
+<p style="font-size:16px;font-weight:600;color:#2f6f8f;margin:3px 0 0;">Foundation Model for ePIC</p>
+</div>
+<div style="width:100%;text-align:center;flex:1;">
+<img src="assets/ModelingResponseGluex_sharp.jpg" alt="Foundation Model for GlueX" style="width:100%;max-height:260px;object-fit:contain;border-radius:4px;">
+<p style="font-size:16px;font-weight:600;color:#2f6f8f;margin:3px 0 0;">Foundation Model for GlueX</p>
+</div>
+</div>
+
 </div>
 
 
 ---
 
-## ML-based Fast Simulation: hpDIRC Example
+## Acceleration Challenges
 
-<div class="callout" style="font-size:21px;">ML fast simulation offers a scalable, GPU-accelerated alternative to full Geant4 simulation — generating high-fidelity large-scale datasets on demand without complex simulation stacks.</div>
-
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px;">
-
-<div style="background:#f0f5f9;border-left:4px solid #2f6f8f;border-radius:4px;padding:14px 16px;font-size:20px;line-height:1.5;">
-<strong style="display:block;color:#123f6d;font-size:22px;margin-bottom:8px;">About the Paper</strong>
-<b>Detector:</b> High-Performance DIRC (hpDIRC) at the EIC<br>
-<b>Method:</b> Generative deep learning model replacing optical photon transport in Cherenkov simulation<br>
-<b>Result:</b> Open standalone fast sim tool for large-scale high-fidelity dataset generation<br>
-<span style="font-size:15px;color:#5f6b7a;display:block;margin-top:8px;">J. Giroux, M. Martinez, C. Fanelli — <a href="https://arxiv.org/abs/2504.19042">arXiv:2504.19042</a></span>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px;">
+  <div style="background:#e7f2f6;border-left:7px solid #2c7da0;border-radius:4px;padding:14px 18px;font-size:22px;line-height:1.35;"><strong style="display:block;color:#123f6d;margin-bottom:4px;font-size:110%;">CUDA Architecture Portability</strong>GPU payloads and all dependencies must be built against the CUDA arch of the destination hardware; mismatched builds cause runtime crashes</div>
+  <div style="background:#fff8e6;border-left:7px solid #b07d00;border-radius:4px;padding:14px 18px;font-size:22px;line-height:1.35;"><strong style="display:block;color:#7a5500;margin-bottom:4px;font-size:110%;">GPU Parameter Tuning</strong>GPU-specific parameters must be tuned to event topology per dataset and available hardware resources</div>
+  <div style="background:#f0f5f9;border-left:7px solid #2f6f8f;border-radius:4px;padding:14px 18px;font-size:22px;line-height:1.35;"><strong style="display:block;color:#123f6d;margin-bottom:4px;font-size:110%;">Workflow Integration</strong>PanDA WMS adaptive brokerage will match containers to GPU resources, but the container build matrix grows with each new arch target</div>
+  <div style="background:#eaf4ea;border-left:7px solid #1E8449;border-radius:4px;padding:14px 18px;font-size:22px;line-height:1.35;"><strong style="display:block;color:#1a5c1a;margin-bottom:4px;font-size:110%;">Physics Validation Fidelity</strong>GPU-offloaded transport must reproduce Geant4 reference within analysis-level tolerances across all relevant observables</div>
+  <div style="background:#f5eef8;border-left:7px solid #7d3c98;border-radius:4px;padding:14px 18px;font-size:22px;line-height:1.35;"><strong style="display:block;color:#5b2c6f;margin-bottom:4px;font-size:110%;">ML Model Generalization</strong><ul style="margin:6px 0 0 0;padding-left:18px;"><li>Models must be trained to take into account different beam conditions, physics processes and kinematic ranges</li><li>Retraining is needed when geometry changes as well</li></ul></div>
+  <div style="background:#fdecea;border-left:7px solid #c0392b;border-radius:4px;padding:14px 18px;font-size:22px;line-height:1.35;"><strong style="display:block;color:#922b21;margin-bottom:4px;font-size:110%;">Event Batching and Sub-event Level Parallelism</strong><ul style="margin:6px 0 0 0;padding-left:18px;"><li>Address GPU under-utilization due to simplistic ePIC event topology</li><li>Integration challenges yet to be carefully studied</li></ul></div>
 </div>
 
-<div style="background:#e8f4e8;border-left:4px solid #1E8449;border-radius:4px;padding:14px 16px;font-size:20px;line-height:1.5;">
-<strong style="display:block;color:#1a5c1a;font-size:22px;margin-bottom:8px;">Relevance to ePIC</strong>
-<ul style="margin:0;padding-left:18px;">
-<li>hpDIRC is a key PID detector in ePIC</li>
-<li>Simphony can provide GPU-accelerated training data for the ML model</li>
-<li>ML surrogate complements GPU offload: fast sim for large-scale production, full sim for validation</li>
-<li>Framework: <a href="https://github.com/eic/ddfastsim">ddFastSim</a> provides DD4hep-native integration</li>
-</ul>
-</div>
-
-</div>
 
 ---
 
 ## Summary and Near-Term Work
 
-<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:4px;align-items:start;">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:4px;align-items:start;">
 
 <div style="background:#f0f5f9;border-left:4px solid #2f6f8f;border-radius:4px;padding:12px 16px;font-size:20px;line-height:1.5;">
 <strong style="display:block;color:#123f6d;font-size:21px;margin-bottom:6px;">What We Showed</strong>
 <ul style="margin:0;padding-left:18px;">
-<li>Multithreading with DD4hep enabled — physics-validated, optimal at 32–64 threads</li>
-<li>Profiling identifies optical photons and EM showers as dominant simulation costs</li>
-<li>Simphony delivers order-of-magnitude GPU speedup for optical photons, validated on pfRICH</li>
+<li>Multithreading enabled in DD4hep
+  <ul><li>Physics-validated, optimal at 32–64 threads</li></ul>
+</li>
+<li>Optical photons and EM showers dominate simulation cost</li>
+<li>Simphony:
+  <ul>
+  <li>GPU acceleration for optical photons in ePIC PID detectors</li>
+  <li>Order-of-magnitude speedup vs 20 Geant4 threads, validated on pfRICH</li>
+  </ul>
+</li>
 </ul>
 </div>
 
 <div style="background:#e8f4e8;border-left:4px solid #1E8449;border-radius:4px;padding:12px 16px;font-size:20px;line-height:1.5;">
 <strong style="display:block;color:#1a5c1a;font-size:21px;margin-bottom:6px;">What We Are Exploring</strong>
 <ul style="margin:0;padding-left:18px;">
-<li>AdePT and Celeritas — complementary EM GPU offload paths with DD4hep integration</li>
-<li>ML fast simulation for hpDIRC; Simphony as training data source</li>
-<li>Sub-event level parallelism as next step beyond multithreading — likely requires event batching given ePIC event topology</li>
+<li>AdePT and Celeritas:
+  <ul>
+  <li>GPU acceleration for EM tracks</li>
+  <li>Integration and benchmarking in progress</li>
+  </ul>
+</li>
+<li>ML-based fast simulation/Foundation models
+  <ul>
+  <li>hpDIRC example</li>
+  <li>Large-scale training data generation with Simphony</li>
+  </ul>
+</li>
+<li>Event batching and sub-event level parallelism</li>
 </ul>
 </div>
 
-<div style="text-align:center;">
-<img src="assets/ePICevent.jpg" style="width:100%;border-radius:6px;object-fit:contain;">
 </div>
 
+<div style="text-align:center;margin-top:12px;">
+<img src="assets/ePICevent.jpg" style="width:90%;border-radius:6px;object-fit:contain;">
 </div>
