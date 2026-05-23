@@ -261,7 +261,7 @@ a {
 <div class="grid-2" style="align-items:stretch;">
 <div style="display:flex;flex-direction:column;gap:7px;">
 <div style="background:#eef4fb;border-left:5px solid #1E5BA8;border-radius:4px;padding:8px 12px;font-size:18px;">
-ePIC will be the first detector at the future Electron-Ion Collider — data taking planned for the <strong>early 2030s</strong>
+ePIC will be the first detector at the future Electron-Ion Collider. Data taking planned for the <strong>early 2030s</strong>
 </div>
 <div style="background:#f0f5f9;border-left:5px solid #2f6f8f;border-radius:4px;padding:8px 12px;font-size:18px;">
 Being realized through a partnership between host labs: <strong>Brookhaven National Laboratory (BNL)</strong> and <strong>Jefferson Lab (JLab)</strong>
@@ -323,21 +323,22 @@ Will enable precision studies of nucleons and nuclei at the scale of sea quarks 
   <tr><td>AC-LGAD</td><td>Streaming Computing</td><td>Jets &amp; Heavy Flavor</td></tr>
   <tr><td>Calorimetry</td><td>User Learning</td><td>Inclusive Physics</td></tr>
   <tr><td>PID</td><td>Production</td><td>Semi-Inclusive Physics</td></tr>
+  <tr><td></td><td>Validation</td><td></td></tr>
 </table>
 </div>
 </div>
 
 <div class="resp-boxes">
-  <div class="resp-box"><strong>Explore Acceleration Pathways</strong>Multithreading, sub-event parallelism, and <b>GPU offload</b> (EIC-Opticks, AdePT/Celeritas) to scale simulations across heterogeneous resources in the <b>ePIC Computing Model</b> (<a href="https://indico.cern.ch/event/1471803/contributions/6967120/">See Holly's talk</a>)</div>
+  <div class="resp-box"><strong>Explore Acceleration Pathways</strong>Multithreading, sub-event parallelism, and <b>GPU offload</b> to scale simulations across heterogeneous resources in the <b>ePIC Computing Model</b> (<a href="https://indico.cern.ch/event/1471803/contributions/6967120/">See Holly's talk</a>)</div>
   <div class="resp-box"><strong>ML-based Fast Simulation</strong>Rapid iteration across detector configurations and reconstruction algorithms</div>
-  <div class="resp-box"><strong>Tractable Background Simulations</strong>Acceleration reduces per-event cost to make large-scale background production and background-inclusive simulations tractable (<a href="https://indico.cern.ch/event/1471803/contributions/6967109/">See Sakib's talk</a>)</div>
+  <div class="resp-box"><strong>Tractable Background Simulations</strong>Acceleration reduces per-event cost to make large-scale background production and background-inclusive simulations tractable (<a href="https://indico.cern.ch/event/1471803/contributions/6967109/">See my other talk</a>)</div>
 </div>
 
 ---
 
 ## Accelerating ePIC with Multithreading: Physics Validation <span style="font-size:13px;font-weight:bold;color:#c0392b;float:right;letter-spacing:0.04em;">⚠ PRELIMINARY</span>
 
-<div class="callout">Tracking η distributions compared across thread counts using 1000 realistic deep inelastic scattering events. Generated charged particles, real-seeded and truth-seeded tracks show consistent agreement.</div>
+<div class="callout" style="font-weight:normal;">Tracking η distributions compared across thread counts using 1000 realistic deep inelastic scattering events. Generated charged particles, real-seeded and truth-seeded tracks show consistent agreement.</div>
 
 <p style="font-size:20px;color:#5f6b7a;margin:6px 0 8px;">Enabled by <a href="https://github.com/AIDASoft/DD4hep/pull/1240">DD4hep#1240</a> — multithreading support added to DD4hep.</p>
 
@@ -355,8 +356,15 @@ Will enable precision studies of nucleons and nuclei at the scale of sea quarks 
     <img src="assets/tracking_overlay_128threads_cropped.png" style="width:100%;max-height:500px;object-fit:contain;">
   </div>
 </div>
-
-<p style="position:absolute;bottom:6px;left:46px;font-size:11px;color:#a0aab4;margin:0;"><a href="https://github.com/eic/epic/releases/tag/26.04.1" style="color:#a0aab4;">epic_craterlake geometry 26.04.1</a> · <a href="https://github.com/eic/containers/pkgs/container/eic_dev_cuda" style="color:#a0aab4;">eic_dev_cuda:unstable-mr-249-default-372a8d1</a> · 1 × AMD EPYC 7763 · 64 physical cores · Perlmutter · <code>root://dtn-eic.jlab.org//volatile/eic/EPIC/EVGEN/DIS/pythia8.316-1.0/NC/noRad/ep/18x275/q2_1to10/pythia8.316-1.0_NC_noRad_ep_18x275_q2_1to10_run000.hepmc3.tree.root</code></p>
+<div style="background:#eef4fb;border-left:4px solid #b3cfe8;border-radius:4px;padding:8px 12px;margin-top:6px;display:flex;justify-content:center;">
+  <table style="border-collapse:collapse;width:auto;font-size:13px;color:#5f6b7a;">
+    <tr><td style="padding:1px 4px;white-space:nowrap;font-weight:600;">Geometry</td><td style="padding:1px 4px;"><a href="https://github.com/eic/epic/releases/tag/26.04.1" style="color:#5f6b7a;">epic_craterlake 26.04.1</a></td></tr>
+    <tr><td style="padding:1px 4px;white-space:nowrap;font-weight:600;">Container</td><td style="padding:1px 4px;"><a href="https://github.com/eic/containers/pkgs/container/eic_dev_cuda" style="color:#5f6b7a;">eic_dev_cuda:unstable-mr-249</a></td></tr>
+    <tr><td style="padding:1px 4px;white-space:nowrap;font-weight:600;">CPU</td><td style="padding:1px 4px;">1 × AMD EPYC 7763, 64 physical cores</td></tr>
+    <tr><td style="padding:1px 4px;white-space:nowrap;font-weight:600;">Site</td><td style="padding:1px 4px;">Perlmutter</td></tr>
+    <tr><td style="padding:1px 4px;white-space:nowrap;font-weight:600;">Input</td><td style="padding:1px 4px;"><code style="font-size:9px;word-break:break-all;">root://dtn-eic.jlab.org//volatile/eic/EPIC/EVGEN/DIS/pythia8.316-1.0/NC/noRad/ep/18x275/q2_1to10/pythia8.316-1.0_NC_noRad_ep_18x275_q2_1to10_run000.hepmc3.tree.root</code></td></tr>
+  </table>
+</div>
 
 ---
 
@@ -364,11 +372,43 @@ Will enable precision studies of nucleons and nuclei at the scale of sea quarks 
 
 <div class="callout">npsim wall time and memory scaling across thread counts for 1000 realistic deep inelastic scattering events. Either 32 or 64 threads could be optimal running condition.</div>
 
-<div style="overflow:hidden;width:60%;height:445px;margin:0 auto;">
-  <img src="assets/prmon_threads_walltime_memory.png" style="width:200%;max-width:none;margin-top:-54px;margin-left:0;">
+<div style="display:grid;grid-template-columns:22% 78%;gap:12px;align-items:start;margin-top:8px;">
+<div style="background:#f0f5f9;border-radius:4px;padding:8px 10px;">
+  <table style="border-collapse:collapse;width:100%;font-size:13px;color:#5f6b7a;">
+    <tr><td style="padding:1px 4px;white-space:nowrap;font-weight:600;">Geometry</td><td style="padding:1px 4px;"><a href="https://github.com/eic/epic/releases/tag/26.04.1" style="color:#5f6b7a;">epic_craterlake 26.04.1</a></td></tr>
+    <tr><td style="padding:1px 4px;white-space:nowrap;font-weight:600;">Container</td><td style="padding:1px 4px;"><a href="https://github.com/eic/containers/pkgs/container/eic_dev_cuda" style="color:#5f6b7a;">eic_dev_cuda:unstable-mr-249</a></td></tr>
+    <tr><td style="padding:1px 4px;white-space:nowrap;font-weight:600;">CPU</td><td style="padding:1px 4px;">1 × AMD EPYC 7763, 64 physical cores</td></tr>
+    <tr><td style="padding:1px 4px;white-space:nowrap;font-weight:600;">Site</td><td style="padding:1px 4px;">Perlmutter</td></tr>
+    <tr><td style="padding:1px 4px;white-space:nowrap;font-weight:600;">Input</td><td style="padding:1px 4px;"><code style="font-size:9px;word-break:break-all;">root://dtn-eic.jlab.org//volatile/eic/EPIC/EVGEN/DIS/pythia8.316-1.0/NC/noRad/ep/18x275/q2_1to10/pythia8.316-1.0_NC_noRad_ep_18x275_q2_1to10_run000.hepmc3.tree.root</code></td></tr>
+  </table>
+</div>
+<div>
+  <img src="assets/walltime_cut.png" style="width:90%;display:block;margin:0 auto;object-fit:contain;">
+</div>
 </div>
 
-<p style="position:absolute;bottom:6px;left:46px;font-size:11px;color:#a0aab4;margin:0;"><a href="https://github.com/eic/epic/releases/tag/26.04.1" style="color:#a0aab4;">epic_craterlake geometry 26.04.1</a> · <a href="https://github.com/eic/containers/pkgs/container/eic_dev_cuda" style="color:#a0aab4;">eic_dev_cuda:unstable-mr-249-default-372a8d1</a> · 1 × AMD EPYC 7763 · 64 physical cores · Perlmutter · <code>root://dtn-eic.jlab.org//volatile/eic/EPIC/EVGEN/DIS/pythia8.316-1.0/NC/noRad/ep/18x275/q2_1to10/pythia8.316-1.0_NC_noRad_ep_18x275_q2_1to10_run000.hepmc3.tree.root</code></p>
+---
+
+## Understanding the Life of an ePIC Event
+
+<div style="background:#e7f2f6;border-left:5px solid #2c7da0;border-radius:4px;padding:10px 14px;font-size:21px;color:#104b73;margin-bottom:12px;line-height:1.5;">
+  Central, far-forward, and far-backward subsystems provide broad pseudorapidity coverage. Simulation time varies by physics process, so we profile to identify acceleration targets.
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;font-size:20px;color:#1f2933;line-height:1.5;margin-bottom:10px;">
+  <div style="background:#f0f5f9;border-radius:6px;padding:10px 14px;">
+    <strong style="color:#123f6d;display:block;margin-bottom:4px;">Current Validation</strong>
+    Pythia8 NC DIS, 18×275 GeV, Q² = 1–10 GeV², no radiative corrections
+  </div>
+  <div style="background:#f0f5f9;border-radius:6px;padding:10px 14px;">
+    <strong style="color:#123f6d;display:block;margin-bottom:4px;">Future Work</strong>
+    Extend to all relevant physics processes. Time budget and acceleration targets vary by dataset
+  </div>
+</div>
+<div style="text-align:center;">
+  <img src="assets/lifeOfEpicEvent.png" alt="Life of an ePIC event" style="width:100%;max-height:260px;object-fit:contain;">
+  <div style="font-size:14px;color:#5f6b7a;margin-top:4px;"><a href="https://eic.github.io/firebird/">ePIC Detector in the Firebird Event Display</a></div>
+</div>
 
 ---
 
@@ -376,17 +416,28 @@ Will enable precision studies of nucleons and nuclei at the scale of sea quarks 
 
 <div style="display:grid;grid-template-columns:30% 70%;gap:16px;align-items:start;margin-top:0;">
   <div>
-    <div style="background:#e7f2f6;border-left:5px solid #2c7da0;border-radius:4px;padding:10px 12px;font-size:20px;font-weight:600;color:#104b73;margin-bottom:10px;">Time profiling of single-threaded run with realistic deep inelastic scattering events. The step density plot shows where stepping activity — and hence simulation time — is concentrated.</div>
-    <div style="font-size:17px;line-height:2.0;color:#1f2933;background:#f0f5f9;border-radius:6px;padding:8px 12px;">
-      <div><strong>1</strong> Far Forward (Other) &nbsp;<span style="color:#888;">43.4%</span></div>
-      <div><strong>2</strong> dRICH &nbsp;<span style="color:#888;">9.5%</span></div>
-      <div><strong>3</strong> DIRC &nbsp;<span style="color:#888;">9.0%</span></div>
-      <div><strong>4</strong> Far Forward (ZDC) &nbsp;<span style="color:#888;">8.1%</span></div>
-      <div><strong>5</strong> Forward EM+Hadron Cal &nbsp;<span style="color:#888;">7.7%</span></div>
-      <div><strong>6</strong> Tracker / Beampipe &nbsp;<span style="color:#888;">6.3%</span></div>
-      <div><strong>7</strong> EEEMCal &nbsp;<span style="color:#888;">6.1%</span></div>
-      <div><strong>8</strong> Barrel Imaging+SciFi Cal &nbsp;<span style="color:#888;">3.6%</span></div>
-      <div><strong>9</strong> Barrel HCal &nbsp;<span style="color:#888;">1.5%</span></div>
+    <div style="background:#e7f2f6;border-left:5px solid #2c7da0;border-radius:4px;padding:10px 12px;font-size:20px;color:#104b73;margin-bottom:10px;">Time profiling of single-threaded run with realistic deep inelastic scattering events. The step density plot shows where stepping activity and simulation time is concentrated.</div>
+    <div style="background:#f0f5f9;border-radius:6px;padding:8px 12px;display:flex;justify-content:center;">
+      <table style="border-collapse:collapse;width:auto;font-size:16px;color:#1f2933;">
+        <thead>
+          <tr style="border-bottom:2px solid #b3cfe8;">
+            <th style="padding:3px 6px;text-align:center;font-weight:700;color:#104b73;">#</th>
+            <th style="padding:3px 6px;text-align:left;font-weight:700;color:#104b73;">Subsystem</th>
+            <th style="padding:3px 6px;text-align:right;font-weight:700;color:#104b73;">Step %</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding:2px 6px;text-align:center;">1</td><td style="padding:2px 6px;">Far Forward (Other)</td><td style="padding:2px 6px;text-align:right;color:#888;">43.4%</td></tr>
+          <tr><td style="padding:2px 6px;text-align:center;">2</td><td style="padding:2px 6px;">dRICH</td><td style="padding:2px 6px;text-align:right;color:#888;">9.5%</td></tr>
+          <tr><td style="padding:2px 6px;text-align:center;">3</td><td style="padding:2px 6px;">DIRC</td><td style="padding:2px 6px;text-align:right;color:#888;">9.0%</td></tr>
+          <tr><td style="padding:2px 6px;text-align:center;">4</td><td style="padding:2px 6px;">Far Forward (ZDC)</td><td style="padding:2px 6px;text-align:right;color:#888;">8.1%</td></tr>
+          <tr><td style="padding:2px 6px;text-align:center;">5</td><td style="padding:2px 6px;">Forward EM+Hadron Cal</td><td style="padding:2px 6px;text-align:right;color:#888;">7.7%</td></tr>
+          <tr><td style="padding:2px 6px;text-align:center;">6</td><td style="padding:2px 6px;">Tracker / Beampipe</td><td style="padding:2px 6px;text-align:right;color:#888;">6.3%</td></tr>
+          <tr><td style="padding:2px 6px;text-align:center;">7</td><td style="padding:2px 6px;">EEEMCal</td><td style="padding:2px 6px;text-align:right;color:#888;">6.1%</td></tr>
+          <tr><td style="padding:2px 6px;text-align:center;">8</td><td style="padding:2px 6px;">Barrel Imaging+SciFi Cal</td><td style="padding:2px 6px;text-align:right;color:#888;">3.6%</td></tr>
+          <tr><td style="padding:2px 6px;text-align:center;">9</td><td style="padding:2px 6px;">Barrel HCal</td><td style="padding:2px 6px;text-align:right;color:#888;">1.5%</td></tr>
+        </tbody>
+      </table>
     </div>
     <div style="background:#e7f2f6;border-left:5px solid #2c7da0;border-radius:4px;padding:7px 10px;font-size:19px;color:#104b73;margin-top:12px;">
       Focuses on stepping time only — track-level actions and other overhead not captured
@@ -401,49 +452,73 @@ Will enable precision studies of nucleons and nuclei at the scale of sea quarks 
         Initialization Time: 58 (s)<br>
         Wall Time/Event: 7.5 (s) 
       </div>
+      <div style="position:absolute;bottom:50px;right:-12px;background:#eef4fb;border-left:3px solid #b3cfe8;border-radius:4px;padding:5px 8px;font-size:11px;color:#5f6b7a;max-width:38%;">
+        <table style="border-collapse:collapse;width:100%;font-size:11px;color:#5f6b7a;">
+          <tr><td style="padding:1px 4px;white-space:nowrap;font-weight:600;">npsim</td><td style="padding:1px 4px;"><a href="https://github.com/eic/npsim/pull/60" style="color:#5f6b7a;">npsim#60</a> @ <code>0c316b6</code></td></tr>
+          <tr><td style="padding:1px 4px;white-space:nowrap;font-weight:600;">Geometry</td><td style="padding:1px 4px;"><a href="https://github.com/eic/epic/releases/tag/26.05.0" style="color:#5f6b7a;">epic_craterlake 26.05.0</a></td></tr>
+          <tr><td style="padding:1px 4px;white-space:nowrap;font-weight:600;">Container</td><td style="padding:1px 4px;"><a href="https://github.com/eic/containers/pkgs/container/eic_xl" style="color:#5f6b7a;">eic_xl:26.05.0-stable</a></td></tr>
+          <tr><td style="padding:1px 4px;white-space:nowrap;font-weight:600;">Input</td><td style="padding:1px 4px;"><code style="font-size:9px;word-break:break-all;">root://dtn-eic.jlab.org//volatile/eic/EPIC/EVGEN/DIS/pythia8.316-1.0/NC/noRad/ep/18x275/q2_1to10/pythia8.316-1.0_NC_noRad_ep_18x275_q2_1to10_run000.hepmc3.tree.root</code></td></tr>
+        </table>
+      </div>
     </div>
   </div>
 </div>
-
-<p style="position:absolute;bottom:6px;left:46px;font-size:11px;color:#a0aab4;margin:0;">Profiling: <a href="https://github.com/eic/npsim/pull/60" style="color:#a0aab4;">npsim#60</a> @ <code>0c316b6</code> · <a href="https://github.com/eic/epic/releases/tag/26.05.0" style="color:#a0aab4;">epic_craterlake geometry 26.05.0</a> · <a href="https://github.com/eic/containers/pkgs/container/eic_xl" style="color:#a0aab4;">eic_xl:26.05.0-stable</a> · <code>root://dtn-eic.jlab.org//volatile/eic/EPIC/EVGEN/DIS/pythia8.316-1.0/NC/noRad/ep/18x275/q2_1to10/pythia8.316-1.0_NC_noRad_ep_18x275_q2_1to10_run000.hepmc3.tree.root</code></p>
 
 ---
 
 ## Acceleration Potential: Central Detectors <span style="font-size:13px;font-weight:bold;color:#c0392b;float:right;letter-spacing:0.04em;">⚠ PRELIMINARY</span>
 
+<div style="display:grid;grid-template-columns:75% 25%;gap:12px;align-items:start;margin-top:4px;">
 <div style="text-align:center;">
   <div style="font-size:16px;font-weight:600;color:#104b73;margin-bottom:4px;">Central Detectors — 43.6% of stepping time</div>
-  <img src="assets/histos_20260521_205726_93697555_heatmap_central.png" alt="Central detector step-density timing heatmap" style="width:100%;max-height:360px;object-fit:contain;">
+  <img src="assets/histos_20260521_205726_93697555_heatmap_central.png" alt="Central detector step-density timing heatmap" style="width:100%;max-height:420px;object-fit:contain;">
 </div>
-
-<div style="background:#eaf4ea;border-left:5px solid #1E8449;border-radius:4px;padding:10px 14px;font-size:18px;color:#1f2933;line-height:1.6;margin-top:10px;">
-  <strong>Subsystem / PID tuning</strong>
-  <ul style="margin:4px 0 0;padding-left:18px;font-size:18px;">
-    <li>Optical-only acceleration sufficient for hpDIRC and dRICH</li>
-    <li>Central-only production: theoretical max <strong>~1.4×</strong> speedup</li>
-  </ul>
+<div style="display:flex;flex-direction:column;gap:8px;">
+  <div style="background:#eaf4ea;border-left:5px solid #1E8449;border-radius:4px;padding:10px 12px;font-size:19px;color:#1f2933;line-height:1.6;">
+    <strong>Subsystem / PID tuning</strong>
+    <ul style="margin:4px 0 0;padding-left:18px;font-size:19px;">
+      <li>Optical-only acceleration sufficient for hpDIRC and dRICH</li>
+      <li>Central-only production: theoretical max <strong>~1.4×</strong> speedup</li>
+    </ul>
+  </div>
+  <div style="background:#f0f5f9;border-radius:4px;padding:8px 10px;">
+    <table style="border-collapse:collapse;width:100%;font-size:11px;color:#5f6b7a;">
+      <tr><td style="padding:1px 4px;white-space:nowrap;font-weight:600;">npsim</td><td style="padding:1px 4px;"><a href="https://github.com/eic/npsim/pull/60" style="color:#5f6b7a;">npsim#60</a> @ <code>0c316b6</code></td></tr>
+      <tr><td style="padding:1px 4px;white-space:nowrap;font-weight:600;">Geometry</td><td style="padding:1px 4px;"><a href="https://github.com/eic/epic/releases/tag/26.05.0" style="color:#5f6b7a;">epic_craterlake 26.05.0</a></td></tr>
+      <tr><td style="padding:1px 4px;white-space:nowrap;font-weight:600;">Container</td><td style="padding:1px 4px;"><a href="https://github.com/eic/containers/pkgs/container/eic_xl" style="color:#5f6b7a;">eic_xl:26.05.0-stable</a></td></tr>
+      <tr><td style="padding:1px 4px;white-space:nowrap;font-weight:600;">Input</td><td style="padding:1px 4px;"><code style="font-size:9px;word-break:break-all;">root://dtn-eic.jlab.org//volatile/eic/EPIC/EVGEN/DIS/pythia8.316-1.0/NC/noRad/ep/18x275/q2_1to10/pythia8.316-1.0_NC_noRad_ep_18x275_q2_1to10_run000.hepmc3.tree.root</code></td></tr>
+    </table>
+  </div>
 </div>
-
-<p style="position:absolute;bottom:6px;left:46px;font-size:11px;color:#a0aab4;margin:0;">Profiling: <a href="https://github.com/eic/npsim/pull/60" style="color:#a0aab4;">npsim#60</a> @ <code>0c316b6</code> · <a href="https://github.com/eic/epic/releases/tag/26.05.0" style="color:#a0aab4;">epic_craterlake geometry 26.05.0</a> · <a href="https://github.com/eic/containers/pkgs/container/eic_xl" style="color:#a0aab4;">eic_xl:26.05.0-stable</a> · <code>root://dtn-eic.jlab.org//volatile/eic/EPIC/EVGEN/DIS/pythia8.316-1.0/NC/noRad/ep/18x275/q2_1to10/pythia8.316-1.0_NC_noRad_ep_18x275_q2_1to10_run000.hepmc3.tree.root</code></p>
+</div>
 
 ---
 
 ## Acceleration Potential: Far Forward Detectors <span style="font-size:13px;font-weight:bold;color:#c0392b;float:right;letter-spacing:0.04em;">⚠ PRELIMINARY</span>
 
+<div style="display:grid;grid-template-columns:75% 25%;gap:12px;align-items:start;margin-top:4px;">
 <div style="text-align:center;">
   <div style="font-size:16px;font-weight:600;color:#104b73;margin-bottom:4px;">Far Forward Detectors — 51.5% of stepping time</div>
-  <img src="assets/histos_20260521_205726_93697555_heatmap_farfwd.png" alt="Far Forward step-density timing heatmap" style="width:100%;max-height:360px;object-fit:contain;">
+  <img src="assets/histos_20260521_205726_93697555_heatmap_farfwd.png" alt="Far Forward step-density timing heatmap" style="width:100%;max-height:420px;object-fit:contain;">
 </div>
-
-<div style="background:#e7f2f6;border-left:5px solid #2c7da0;border-radius:4px;padding:10px 14px;font-size:18px;color:#1f2933;line-height:1.6;margin-top:10px;">
-  <strong>Full ePIC production</strong>
-  <ul style="margin:4px 0 0;padding-left:18px;font-size:18px;">
-    <li>Far Forward dominates stepping time</li>
-    <li>Must accelerate both EM and optical transport for meaningful gains</li>
-  </ul>
+<div style="display:flex;flex-direction:column;gap:8px;">
+  <div style="background:#e7f2f6;border-left:5px solid #2c7da0;border-radius:4px;padding:10px 12px;font-size:19px;color:#1f2933;line-height:1.6;">
+    <strong>Full ePIC production</strong>
+    <ul style="margin:4px 0 0;padding-left:18px;font-size:19px;">
+      <li>Far Forward dominates stepping time</li>
+      <li>Must accelerate both EM and optical transport for meaningful gains</li>
+    </ul>
+  </div>
+  <div style="background:#f0f5f9;border-radius:4px;padding:8px 10px;">
+    <table style="border-collapse:collapse;width:100%;font-size:11px;color:#5f6b7a;">
+      <tr><td style="padding:1px 4px;white-space:nowrap;font-weight:600;">npsim</td><td style="padding:1px 4px;"><a href="https://github.com/eic/npsim/pull/60" style="color:#5f6b7a;">npsim#60</a> @ <code>0c316b6</code></td></tr>
+      <tr><td style="padding:1px 4px;white-space:nowrap;font-weight:600;">Geometry</td><td style="padding:1px 4px;"><a href="https://github.com/eic/epic/releases/tag/26.05.0" style="color:#5f6b7a;">epic_craterlake 26.05.0</a></td></tr>
+      <tr><td style="padding:1px 4px;white-space:nowrap;font-weight:600;">Container</td><td style="padding:1px 4px;"><a href="https://github.com/eic/containers/pkgs/container/eic_xl" style="color:#5f6b7a;">eic_xl:26.05.0-stable</a></td></tr>
+      <tr><td style="padding:1px 4px;white-space:nowrap;font-weight:600;">Input</td><td style="padding:1px 4px;"><code style="font-size:9px;word-break:break-all;">root://dtn-eic.jlab.org//volatile/eic/EPIC/EVGEN/DIS/pythia8.316-1.0/NC/noRad/ep/18x275/q2_1to10/pythia8.316-1.0_NC_noRad_ep_18x275_q2_1to10_run000.hepmc3.tree.root</code></td></tr>
+    </table>
+  </div>
 </div>
-
-<p style="position:absolute;bottom:6px;left:46px;font-size:11px;color:#a0aab4;margin:0;">Profiling: <a href="https://github.com/eic/npsim/pull/60" style="color:#a0aab4;">npsim#60</a> @ <code>0c316b6</code> · <a href="https://github.com/eic/epic/releases/tag/26.05.0" style="color:#a0aab4;">epic_craterlake geometry 26.05.0</a> · <a href="https://github.com/eic/containers/pkgs/container/eic_xl" style="color:#a0aab4;">eic_xl:26.05.0-stable</a> · <code>root://dtn-eic.jlab.org//volatile/eic/EPIC/EVGEN/DIS/pythia8.316-1.0/NC/noRad/ep/18x275/q2_1to10/pythia8.316-1.0_NC_noRad_ep_18x275_q2_1to10_run000.hepmc3.tree.root</code></p>
+</div>
 
 ---
 
@@ -491,34 +566,31 @@ Will enable precision studies of nucleons and nuclei at the scale of sea quarks 
 
 ## Simphony Use Case: Standalone ePIC Subsystem Design Simulations
 
-<div style="display:grid;grid-template-columns:32% 68%;gap:16px;align-items:start;">
+<div style="display:grid;grid-template-columns:22% 56% 22%;gap:10px;align-items:center;margin-top:4px;">
 
-<div style="background:#eef4fb;border:1px solid #b3cfe8;border-left:6px solid #1E5BA8;border-radius:6px;padding:16px 18px;">
-<p style="font-size:20px;font-weight:700;color:#1E5BA8;margin:0 0 10px;">Accelerating Optical Photons in ePIC PID Detectors</p>
-<p style="font-size:18px;margin:0 0 10px;">Accelerating optical photon transport is critical for PID detector simulations <a href="https://arxiv.org/abs/2410.20410" style="font-size:15px;color:#5f6b7a;">(C. Chatterjee et al.)</a></p>
-<ul style="font-size:18px;margin:0;padding-left:16px;line-height:1.7;">
-  <li><strong>hpDIRC</strong> — barrel PID; dense Cherenkov rings</li>
-  <li><strong>pfRICH</strong> — backward endcap PID; aerogel radiator</li>
-  <li><strong>dRICH</strong> — forward endcap PID; dual aerogel + C₂F₆</li>
-</ul>
+<div style="display:flex;flex-direction:column;gap:8px;">
+  <div style="background:white;border:2px solid #b3cfe8;border-radius:4px;padding:3px;">
+    <img src="assets/PFRICHdetector.jpg" alt="pfRICH" style="width:100%;object-fit:contain;">
+    <p style="text-align:center;font-size:11px;font-weight:700;color:#1E5BA8;margin:2px 0 1px;">pfRICH · <a href="https://arxiv.org/abs/2512.14598" style="font-weight:400;font-size:10px;color:#5f6b7a;">Dongwi et al. (2025)</a></p>
+  </div>
+  <div class="callout" style="font-size:20px;padding:10px 12px;line-height:1.5;">
+    Optical photon transport dominates simulation time for PID detectors: hpDIRC, pfRICH and dRICH.<br>
+    <span style="font-size:15px;color:#5f6b7a;"><a href="https://arxiv.org/abs/2410.20410" style="color:#5f6b7a;">C. Chatterjee et al. (2024)</a></span>
+  </div>
 </div>
 
-<div style="position:relative;">
-  <img src="assets/ePICCentralDetector.jpg" alt="ePIC Central Detector" style="width:100%;max-height:430px;object-fit:contain;">
-  <!-- pfRICH inset: left -->
-  <div style="position:absolute;top:30%;left:0;width:28%;background:white;border:2px solid #b3cfe8;border-radius:4px;padding:2px;">
-    <img src="assets/PFRICHdetector.jpg" alt="pfRICH" style="width:100%;object-fit:contain;">
-    <p style="text-align:center;font-size:12px;font-weight:700;color:#1E5BA8;margin:2px 0 1px;">pfRICH · <a href="https://arxiv.org/abs/2512.14598" style="font-weight:400;font-size:11px;color:#5f6b7a;">Dongwi et al.</a></p>
+<div style="display:flex;flex-direction:column;gap:6px;">
+  <img src="assets/ePICCentralDetector.jpg" alt="ePIC Central Detector" style="width:100%;object-fit:contain;">
+  <div style="background:white;border:2px solid #b3cfe8;border-radius:4px;padding:3px;">
+    <img src="assets/HPDIRCDetector.jpg" alt="hpDIRC" style="width:50%;display:block;margin:0 auto;object-fit:contain;">
+    <p style="text-align:center;font-size:11px;font-weight:700;color:#1E5BA8;margin:2px 0 1px;">hpDIRC · <a href="https://indico.bnl.gov/event/26584/contributions/102777/attachments/62225/107677/20250612-hpDIRC-DACmeeting_GK.pdf" style="font-weight:400;font-size:10px;color:#5f6b7a;">G. Kalicy (2025)</a></p>
   </div>
-  <!-- hpDIRC inset: top -->
-  <div style="position:absolute;top:2%;left:30%;width:38%;background:white;border:2px solid #b3cfe8;border-radius:4px;padding:2px;">
-    <img src="assets/HPDIRCDetector.jpg" alt="hpDIRC" style="width:100%;object-fit:contain;">
-    <p style="text-align:center;font-size:12px;font-weight:700;color:#1E5BA8;margin:2px 0 1px;">hpDIRC · <a href="https://indico.bnl.gov/event/26584/contributions/102777/attachments/62225/107677/20250612-hpDIRC-DACmeeting_GK.pdf" style="font-weight:400;font-size:11px;color:#5f6b7a;">G. Kalicy (2025)</a></p>
-  </div>
-  <!-- dRICH inset: right -->
-  <div style="position:absolute;top:30%;right:0;width:28%;background:white;border:2px solid #b3cfe8;border-radius:4px;padding:2px;">
+</div>
+
+<div style="display:flex;flex-direction:column;justify-content:flex-start;gap:8px;">
+  <div style="background:white;border:2px solid #b3cfe8;border-radius:4px;padding:3px;">
     <img src="assets/drich-detector.jpg" alt="dRICH" style="width:100%;object-fit:contain;">
-    <p style="text-align:center;font-size:12px;font-weight:700;color:#1E5BA8;margin:2px 0 1px;">dRICH · <a href="https://indico.bnl.gov/event/31228/contributions/118734/attachments/67379/115790/rich2025-contalbrigo_2col.pdf" style="font-weight:400;font-size:11px;color:#5f6b7a;">Contalbrigo et al.</a></p>
+    <p style="text-align:center;font-size:11px;font-weight:700;color:#1E5BA8;margin:2px 0 1px;">dRICH · <a href="https://indico.bnl.gov/event/31228/contributions/118734/attachments/67379/115790/rich2025-contalbrigo_2col.pdf" style="font-weight:400;font-size:10px;color:#5f6b7a;">Contalbrigo et al. (2026)</a></p>
   </div>
 </div>
 
@@ -556,7 +628,7 @@ Will enable precision studies of nucleons and nuclei at the scale of sea quarks 
     <div style="position:absolute;top:0;left:0;width:60px;bottom:0;background:#ffffff;"></div>
     <span style="position:absolute;top:18%;left:34px;font-size:14px;color:#1f2933;">10²</span>
     <span style="position:absolute;top:78%;left:34px;font-size:14px;color:#1f2933;">10¹</span>
-    <span style="position:absolute;top:40px;right:60px;font-size:16px;color:#5f6b7a;"><a href="https://arxiv.org/abs/2512.06061" style="color:#5f6b7a;">G. Galgoczi et al. arXiv:2512.06061</a></span>
+    <span style="position:absolute;top:40px;right:60px;font-size:16px;color:#5f6b7a;"><a href="https://arxiv.org/abs/2512.06061" style="color:#5f6b7a;">G. Galgoczi et al. (2025) arXiv:2512.06061</a></span>
   </div>
 </div>
 </div>
@@ -598,7 +670,7 @@ Will enable precision studies of nucleons and nuclei at the scale of sea quarks 
 </div>
 
 <div class="callout" style="font-size:23px;">
-<strong>Exploring AdePT in ePIC</strong> <span style="font-weight:normal;font-size:17px;">(<a href="https://indico.bnl.gov/event/32557/#1-adept-gpu-accleration-for-em">W. Deconinck</a>)</span>
+<strong>Exploring AdePT in ePIC</strong> <span style="font-weight:normal;font-size:17px;">(<a href="https://indico.bnl.gov/event/32557/#1-adept-gpu-accleration-for-em">W. Deconinck (2025)</a>)</span>
 <ul style="margin:8px 0 0;padding-left:18px;font-size:22px;">
 <li>Added <a href="https://github.com/AIDASoft/DD4hep/pull/1606">DD4hep plugin</a></li>
 <li>End-to-end pipeline with MC truth propagation</li>
