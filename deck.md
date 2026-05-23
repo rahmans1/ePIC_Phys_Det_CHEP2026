@@ -429,7 +429,7 @@ Will enable precision studies of nucleons and nuclei at the scale of sea quarks 
         <tbody>
           <tr><td style="padding:2px 6px;text-align:center;">1</td><td style="padding:2px 6px;">Far Forward (Other)</td><td style="padding:2px 6px;text-align:right;color:#888;">43.4%</td></tr>
           <tr><td style="padding:2px 6px;text-align:center;">2</td><td style="padding:2px 6px;">dRICH</td><td style="padding:2px 6px;text-align:right;color:#888;">9.5%</td></tr>
-          <tr><td style="padding:2px 6px;text-align:center;">3</td><td style="padding:2px 6px;">DIRC</td><td style="padding:2px 6px;text-align:right;color:#888;">9.0%</td></tr>
+          <tr><td style="padding:2px 6px;text-align:center;">3</td><td style="padding:2px 6px;">hpDIRC</td><td style="padding:2px 6px;text-align:right;color:#888;">9.0%</td></tr>
           <tr><td style="padding:2px 6px;text-align:center;">4</td><td style="padding:2px 6px;">Far Forward (ZDC)</td><td style="padding:2px 6px;text-align:right;color:#888;">8.1%</td></tr>
           <tr><td style="padding:2px 6px;text-align:center;">5</td><td style="padding:2px 6px;">Forward EM+Hadron Cal</td><td style="padding:2px 6px;text-align:right;color:#888;">7.7%</td></tr>
           <tr><td style="padding:2px 6px;text-align:center;">6</td><td style="padding:2px 6px;">Tracker / Beampipe</td><td style="padding:2px 6px;text-align:right;color:#888;">6.3%</td></tr>
