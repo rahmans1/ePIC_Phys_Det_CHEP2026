@@ -304,7 +304,7 @@ Will enable precision studies of nucleons and nuclei at the scale of sea quarks 
 <ul style="margin:0;padding-left:20px;">
 <li>Sits within the <strong>Software &amp; Computing</strong> branch of the ePIC collaboration</li>
 <li>Embrace <strong>streaming readout</strong> as data format (<a href="https://indico.cern.ch/event/1471803/contributions/6967323/">See Takuya's talk</a>)</li>
-<li>Enable seamless and efficient detector design and integration in simulation</li>
+<li>Enable seamless and efficient detector design and integration in simulation, including validation with engineering design</li>
 <li>Implement background timing structure</li>
 <li>Deliver accurate MC sim with <strong>Geant4</strong> and <strong>DD4hep</strong></li>
 <li>Coordinate with User Learning to inform the collaboration about our detector simulation tools (<a href="https://indico.cern.ch/event/1471803/contributions/6968308/">See Alexandr's talk</a>)</li>
@@ -407,7 +407,7 @@ Will enable precision studies of nucleons and nuclei at the scale of sea quarks 
 </div>
 <div style="text-align:center;">
   <img src="assets/lifeOfEpicEvent.png" alt="Life of an ePIC event" style="width:100%;max-height:260px;object-fit:contain;">
-  <div style="font-size:14px;color:#5f6b7a;margin-top:4px;"><a href="https://eic.github.io/firebird/">ePIC Detector in the Firebird Event Display</a></div>
+  <div style="font-size:17px;color:#5f6b7a;margin-top:4px;"><a href="https://eic.github.io/firebird/">ePIC Detector in the Firebird Event Display</a></div>
 </div>
 
 ---
