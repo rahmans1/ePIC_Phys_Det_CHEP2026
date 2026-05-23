@@ -696,7 +696,7 @@ Will enable precision studies of nucleons and nuclei at the scale of sea quarks 
 <div style="background:#f0f5f9;border-left:4px solid #2f6f8f;border-radius:4px;padding:14px 16px;font-size:19px;line-height:1.5;">
 <strong style="display:block;color:#123f6d;font-size:21px;margin-bottom:8px;">Foundation Model for DIRC Detectors</strong>
 <ul style="margin:0;padding-left:18px;">
-<li>Transformer-based Foundation Model with a Mixture-of-Experts (MoE) architecture developed for DIRC detectors [1,4]</li>
+<li>Transformer-based Foundation Model with a Mixture-of-Experts (MoE) architecture developed for DIRC detectors [<a href="https://iopscience.iop.org/article/10.1088/2632-2153/ae3d81">1</a>,<a href="https://arxiv.org/abs/2604.24775">4</a>]</li>
 <li>Single pre-trained FM supports multiple downstream applications via fine-tuning:
   <ul style="margin:4px 0 0 0;padding-left:16px;">
     <li>High-fidelity, fast simulations (topology + photon yield)</li>
@@ -704,7 +704,7 @@ Will enable precision studies of nucleons and nuclei at the scale of sea quarks 
     <li>Noise Filtering</li>
   </ul>
 </li>
-<li>Demonstrated on the ePIC hpDIRC and the GlueX DIRC at Jefferson Lab [1,2,3,4], and now being extended to calorimetry [<a href="https://arxiv.org/abs/2603.28804">5</a>]</li>
+<li>Demonstrated on the ePIC hpDIRC and the GlueX DIRC at Jefferson Lab [<a href="https://iopscience.iop.org/article/10.1088/2632-2153/ae3d81">1</a>,<a href="https://iopscience.iop.org/article/10.1088/2632-2153/ada8f4">2</a>,<a href="https://arxiv.org/abs/2504.19042">3</a>,<a href="https://arxiv.org/abs/2604.24775">4</a>], and now being extended to calorimetry [<a href="https://arxiv.org/abs/2603.28804">5</a>]</li>
 </ul>
 </div>
 
@@ -790,4 +790,41 @@ Will enable precision studies of nucleons and nuclei at the scale of sea quarks 
 
 <div style="text-align:center;margin-top:12px;">
 <img src="assets/ePICevent.jpg" style="width:90%;border-radius:6px;object-fit:contain;">
+</div>
+
+---
+
+<!-- _class: compact -->
+
+## Related ePIC Talks at CHEP 2026
+
+<div class="title-top" style="margin-bottom:8px;">
+  <img src="assets/epic_logo.png" alt="ePIC logo">
+  <img src="assets/bnl_logo.png" alt="Brookhaven National Laboratory logo">
+  <img src="assets/jefferson_lab_logo.png" alt="Jefferson Lab logo">
+  <img src="assets/office_of_science_logo.png" alt="Office of Science logo">
+</div>
+
+<div style="display:flex;flex-direction:column;gap:12px;margin-top:8px;font-size:20px;">
+
+<div style="background:#eef4fb;border-left:5px solid #1E5BA8;border-radius:4px;padding:10px 16px;">
+<strong style="color:#1E5BA8;"><a href="https://indico.cern.ch/event/1471803/contributions/6967120/" style="color:#1E5BA8;text-decoration:underline;">The ePIC Streaming Computing Model</a></strong><br>
+<span class="muted">Holly Szumila-Vance</span>
+</div>
+
+<div style="background:#eaf4ea;border-left:5px solid #1E8449;border-radius:4px;padding:10px 16px;">
+<strong style="color:#1E8449;"><a href="https://indico.cern.ch/event/1471803/contributions/6967109/" style="color:#1E8449;text-decoration:underline;">Scaling ePIC Simulation Production: Distributed Workflow and Data Management</a></strong><br>
+<span class="muted">Sakib Rahman</span>
+</div>
+
+<div style="background:#f3eef8;border-left:5px solid #7B3FA0;border-radius:4px;padding:10px 16px;">
+<strong style="color:#7B3FA0;"><a href="https://indico.cern.ch/event/1471803/contributions/6967323/" style="color:#7B3FA0;text-decoration:underline;">Development of Streaming Data Reconstruction for ePIC Experiment at EIC</a></strong><br>
+<span class="muted">Takuya Kumaoka</span>
+</div>
+
+<div style="background:#fdf6e3;border-left:5px solid #b07d00;border-radius:4px;padding:10px 16px;">
+<strong style="color:#b07d00;"><a href="https://indico.cern.ch/event/1471803/contributions/6968308/" style="color:#b07d00;text-decoration:underline;">ePIC User Learning Training and Documentation Strategies</a></strong><br>
+<span class="muted">Alexandr Prozorov</span>
+</div>
+
 </div>
