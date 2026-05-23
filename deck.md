@@ -646,7 +646,7 @@ Validation and performance studies for dRICH and hpDIRC ongoing<br>Preliminary h
 
 ## Summary and Near-Term Work
 
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:4px;">
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:4px;align-items:start;">
 
 <div style="background:#f0f5f9;border-left:4px solid #2f6f8f;border-radius:4px;padding:12px 16px;font-size:20px;line-height:1.5;">
 <strong style="display:block;color:#123f6d;font-size:21px;margin-bottom:6px;">What We Showed</strong>
@@ -654,21 +654,20 @@ Validation and performance studies for dRICH and hpDIRC ongoing<br>Preliminary h
 <li>Multithreading with DD4hep enabled — physics-validated, optimal at 32–64 threads</li>
 <li>Profiling identifies optical photons and EM showers as dominant simulation costs</li>
 <li>Simphony delivers order-of-magnitude GPU speedup for optical photons, validated on pfRICH</li>
-<li>AdePT and Celeritas provide complementary EM GPU offload paths with DD4hep integration</li>
-<li>ML fast simulation demonstrated for hpDIRC; Simphony can supply training data</li>
 </ul>
 </div>
 
 <div style="background:#e8f4e8;border-left:4px solid #1E8449;border-radius:4px;padding:12px 16px;font-size:20px;line-height:1.5;">
-<strong style="display:block;color:#1a5c1a;font-size:21px;margin-bottom:6px;">Near-Term Work</strong>
+<strong style="display:block;color:#1a5c1a;font-size:21px;margin-bottom:6px;">What We Are Exploring</strong>
 <ul style="margin:0;padding-left:18px;">
-<li>Complete ePIC geometry benchmarks for AdePT and Celeritas</li>
-<li>Resolve tessellated region support in ePIC geometry for AdePT</li>
-<li>Optical photon support in Celeritas DD4hep plugin</li>
-<li>Expand Simphony validation to dRICH and hpDIRC</li>
-<li>Connect GPU workloads to heterogeneous production resources via ePIC Computing Model</li>
-<li>Explore sub-event level parallelism as next step beyond multithreading — likely requires event batching given ePIC event topology</li>
+<li>AdePT and Celeritas — complementary EM GPU offload paths with DD4hep integration</li>
+<li>ML fast simulation for hpDIRC; Simphony as training data source</li>
+<li>Sub-event level parallelism as next step beyond multithreading — likely requires event batching given ePIC event topology</li>
 </ul>
+</div>
+
+<div style="text-align:center;">
+<img src="assets/ePICevent.jpg" style="width:100%;border-radius:6px;object-fit:contain;">
 </div>
 
 </div>
