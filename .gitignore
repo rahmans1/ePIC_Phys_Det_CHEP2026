@@ -1,0 +1,10 @@
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+__pycache__/
+.ipynb_checkpoints/
+
+*.Zone.Identifier
+exports/
+outline_pptx_media/
