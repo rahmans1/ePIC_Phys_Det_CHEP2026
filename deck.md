@@ -389,10 +389,10 @@ Will enable precision studies of nucleons and nuclei at the scale of sea quarks 
 
 ---
 
-## Understanding the Life of an ePIC Event
+## Understanding the Life of ePIC Events
 
 <div style="background:#e7f2f6;border-left:5px solid #2c7da0;border-radius:4px;padding:10px 14px;font-size:21px;color:#104b73;margin-bottom:12px;line-height:1.5;">
-  Central, far-forward, and far-backward subsystems provide broad pseudorapidity coverage. Simulation time varies by physics process, so we profile to identify acceleration targets.
+  Central, far-forward, and far-backward subsystems provide broad pseudorapidity coverage, enabling the study of many different physics processes. We profile the lifetime of ePIC events to improve our computational efficiency.
 </div>
 
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;font-size:20px;color:#1f2933;line-height:1.5;margin-bottom:10px;">
@@ -757,7 +757,7 @@ Will enable precision studies of nucleons and nuclei at the scale of sea quarks 
 <li>Multithreading enabled in DD4hep
   <ul><li>Physics-validated, optimal at 32–64 threads</li></ul>
 </li>
-<li>Optical photons and EM showers dominate simulation cost</li>
+<li>Preliminary profiling shows that optical photons and EM showers dominate simulation cost</li>
 <li>Simphony:
   <ul>
   <li>GPU acceleration for optical photons in ePIC PID detectors</li>
