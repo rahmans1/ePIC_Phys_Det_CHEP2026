@@ -670,7 +670,7 @@ Will enable precision studies of nucleons and nuclei at the scale of sea quarks 
 </div>
 
 <div class="callout" style="font-size:23px;">
-<strong>Exploring AdePT in ePIC</strong> <span style="font-weight:normal;font-size:17px;">(<a href="https://indico.bnl.gov/event/32557/#1-adept-gpu-accleration-for-em">W. Deconinck (2025)</a>)</span>
+<strong>Exploring AdePT in ePIC</strong>
 <ul style="margin:8px 0 0;padding-left:18px;font-size:22px;">
 <li>Added <a href="https://github.com/AIDASoft/DD4hep/pull/1606">DD4hep plugin</a></li>
 <li>End-to-end pipeline with MC truth propagation</li>
